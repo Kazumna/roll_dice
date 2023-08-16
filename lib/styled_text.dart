@@ -2,13 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
-  const StyledText({super.key});
+  String text;
+
+  StyledText(this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Hello!',
-      style: TextStyle(
+    return Text(
+      text,
+      style: const TextStyle(
         color: Colors.white,
         fontSize: 28,
       ),

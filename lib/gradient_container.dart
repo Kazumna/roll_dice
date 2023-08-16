@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:roll_dice/styled_text.dart';
 
-var startAlignment = Alignment.topLeft;
-var endAlignment = Alignment.bottomRight;
+//final mean this data container variable will never receive a new value
+final startAlignment = Alignment.topLeft;
+final endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});

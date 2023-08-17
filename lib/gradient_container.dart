@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice/dice_roller.dart';
 
 //final mean this data container variable will never receive a new value
 // final startAlignment = Alignment.topLeft;
@@ -16,9 +17,6 @@ class GradientContainer extends StatelessWidget {
   //     : color1 = Colors.deepPurple,
   //       color2 = Colors.indigo;
 
-  void rollDice() {
-    print("clikcing");
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,25 +28,8 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              "assets/images/dice-2.png",
-              width: 200,
-            ),
-
-            TextButton(
-              onPressed: rollDice,
-              child: Text(
-                'Roll Dice',
-              ),
-
-            ),
-
-          ],
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }

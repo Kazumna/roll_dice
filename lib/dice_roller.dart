@@ -21,10 +21,11 @@ class _DiceRollerState extends State<DiceRoller> {
 
   void rollDice() {
     // Random().nextInt(6);   /// Between 0 and 5 (inclusive)
-    var diceRoll = randomizer.nextInt(6) + 1;   /// Between 1 and 6 (inclusive)
+    // var diceRoll = randomizer.nextInt(6) + 1;   /// Between 1 and 6 (inclusive)
 
     setState(() {
-      currentDiceRoll = diceRoll;
+      // currentDiceRoll = diceRoll;
+      currentDiceRoll = randomizer.nextInt(6) + 1;
     });
   }
 

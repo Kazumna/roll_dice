@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+//This can declare outside of the class coz
+//It only created once.
+final randomizer = Random();
+
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
 
@@ -10,12 +14,14 @@ class DiceRoller extends StatefulWidget {
 
 class _DiceRollerState extends State<DiceRoller> {
 
+  // final randomizer = Random();
+
   //Initial val is 2
   var currentDiceRoll = 2;
 
   void rollDice() {
     // Random().nextInt(6);   /// Between 0 and 5 (inclusive)
-    var diceRoll = Random().nextInt(6) + 1;   /// Between 1 and 6 (inclusive)
+    var diceRoll = randomizer.nextInt(6) + 1;   /// Between 1 and 6 (inclusive)
 
     setState(() {
       currentDiceRoll = diceRoll;
